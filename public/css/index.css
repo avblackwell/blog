@@ -45,20 +45,17 @@
 	--tracking: -0.05ch;
 	--tracking-s: -0.075ch;
 	--syntax-tab-size: 2;
+	--background-color: var(--color-light);
+	--text-color: var(--color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
+		--color-dark: #404040;
+		--color-light: #f3f3f3;
 
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
+		--background-color: var(--color-dark);
+		--text-color: var(--color-light);
 	}
 }
 
@@ -141,8 +138,8 @@ select {
 /* Global stylesheet */
 
 body {
-	background: var(--color-light);
-	color: var(--color-dark);
+	background: var(--background-color);
+	color: var(--text-color);
 	font-family: var(--font-base);
 	font-size: var(--size-step-1);
 	letter-spacing: var(--tracking);
@@ -228,6 +225,12 @@ main:focus {
 }
 
 /* components */
+.post-metadata {}
+
+.post-tag {}
+
+.links-nextprev {}
+
 header {
 	display: flex;
 	align-items: center;

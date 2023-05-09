@@ -8,7 +8,7 @@ layout: layouts/base.njk
 <article class="wrapper region prose flow">
 	<h1>{{ title }}</h1>
 
-	<ul class="post-metadata">
+	<ul role="list" class="post-metadata">
 		<li>
 			<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 		</li>
@@ -27,7 +27,7 @@ layout: layouts/base.njk
 		{%- set previousPost = collections.posts | getPreviousCollectionItem %}
 		{%- set nextPost = collections.posts | getNextCollectionItem %}
 		{%- if nextPost or previousPost %}
-			<ul class="links-nextprev">
+			<ul role="list" class="links-nextprev">
 				{%- if previousPost %}
 					<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
 					</li>
