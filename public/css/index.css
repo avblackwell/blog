@@ -235,14 +235,21 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-block: var(--space-s-m);
+	gap: 1rem;
 }
 
-.nav {
+nav ul {
+	margin: 0;
+}
+
+.cluster {
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: var(--space, 1rem);
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .grid {
