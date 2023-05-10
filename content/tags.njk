@@ -15,7 +15,7 @@ eleventyComputed:
 permalink: /tags/{{ tag | slugify }}/
 ---
 
-<article class="region wrapper flow">
+<article class="region wrapper flow prose">
   <h1>Tagged “{{ tag }}”</h1>
 
   {% set postslist = collections[tag] %}

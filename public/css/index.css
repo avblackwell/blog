@@ -141,7 +141,7 @@ body {
 	background: var(--background-color);
 	color: var(--text-color);
 	font-family: var(--font-base);
-	font-size: var(--size-step-1);
+	font-size: var(--size-step-0);
 	letter-spacing: var(--tracking);
 	line-height: 1.4
 }
@@ -154,15 +154,15 @@ h3 {
 }
 
 h1 {
-	font-size: var(--size-step-5)
+	font-size: var(--size-step-3)
 }
 
 h2 {
-	font-size: var(--size-step-4)
+	font-size: var(--size-step-2)
 }
 
 h3 {
-	font-size: var(--size-step-3)
+	font-size: var(--size-step-1)
 }
 
 blockquote:not([class]),
@@ -224,10 +224,16 @@ main:focus {
 	color: var(--background-color);
 }
 
+time {
+	display: block;
+	font-style: italic;
+}
+
 /* components */
 .post-list {
-	margin:0;
+	margin: 0;
 }
+
 .post-metadata {}
 
 .post-tag {}
@@ -241,6 +247,7 @@ header {
 	flex-wrap: wrap;
 	padding-block: var(--space-s-m);
 	gap: 1rem;
+	margin: 0;
 }
 
 nav ul {
@@ -294,12 +301,21 @@ nav ul {
 
 /* util */
 .prose {
-	--flow-space: var(--space-l-xl);
-	--wrapper-max-width: 55rem
+	--flow-space: var(--space-m-l);
+	line-height: 1.8;
+	--wrapper-max-width: 50rem
 }
 
-.prose :is(h2, h3, h4)+* {
-	--flow-space: var(--space-s-m)
+.prose h1+* {
+	--flow-space: 0.5em;
+}
+
+.prose :is(pre, pre+*, figure, figure+*, h2, h3, h4) {
+	--flow-space: var(--space-l-xl);
+}
+
+.prose :is(h2+*, h3+*, h4+*) {
+	--flow-space: var(--space-s);
 }
 
 .prose blockquote {
@@ -325,14 +341,14 @@ nav ul {
 }
 
 .region {
-	padding-bottom: var(--region-space, var(--space-l-2xl));
-	padding-top: var(--region-space, var(--space-l-2xl))
+	padding-block: var(--region-space, var(--space-l-xl));
 }
+
 
 .wrapper {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: var(--wrapper-max-width, 85rem);
+	max-width: var(--wrapper-max-width, 75rem);
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
 	position: relative

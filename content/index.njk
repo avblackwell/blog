@@ -5,12 +5,14 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
+<article class="region wrapper flow prose">
+	<h1>Hey, I'm Alex</h1>
+	<p>My favorite projects are those where I work at the intersection of different disciplines and combine my design, development, and data viz skills to solve complex problems.</p>
 
-<article class="region wrapper flow">
 	{% set postsCount = collections.posts | length %}
 	{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-	<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}
-	</h1>
+	<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}
+	</h2>
 
 	{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 	{% set postslistCounter = postsCount %}
