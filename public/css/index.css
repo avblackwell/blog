@@ -254,6 +254,18 @@ nav ul {
 	margin: 0;
 }
 
+header a {
+	text-decoration: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+nav ul li [aria-current] {
+	text-decoration: underline;
+}
+
 .cluster {
 	display: flex;
 	flex-wrap: wrap;
@@ -388,4 +400,8 @@ nav ul {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+.bg-dark {
+	
 }
